@@ -15,6 +15,9 @@ This project contains multiple landing page templates designed to showcase Kapla
 | **Template 1** | Modern Startup | Clean tech-style, video-heavy, large hero, Stripe-inspired |
 | **Template 2** | Education / University | Structured layout, location grid, institutional feel |
 | **Template 3** | Video-First Marketing | Dark theme, Netflix-style, big media sections, cinematic |
+| **Template 4** | Corporate Enterprise | IBM/Salesforce-inspired, sharp geometry, trust-heavy, data-driven |
+| **Template 5** | Creative Agency / Bold | Oversized typography, asymmetric layouts, Awwwards aesthetic |
+| **Template 6** | Luxury Travel Premium | Serif fonts, ivory/gold palette, Four Seasons sophistication |
 
 ## Tech Stack
 
