@@ -1,0 +1,82 @@
+{
+  "nav": {
+    "home": "Home",
+    "locations": "Locations",
+    "videos": "Videos",
+    "about": "About",
+    "programs": "Programs",
+    "contact": "Contact",
+    "applyNow": "Apply Now"
+  },
+  "hero": {
+    "title": "Learn English Around the World",
+    "subtitle": "with Kaplan International Languages",
+    "description": "Explore our language schools across 8 countries. Watch student experiences, discover destinations, and start your international education journey today.",
+    "ctaPrimary": "Apply Now",
+    "ctaSecondary": "Explore Schools"
+  },
+  "locations": {
+    "title": "Our Schools Worldwide",
+    "subtitle": "Choose from 35+ destinations across 8 countries",
+    "viewAll": "View All Locations",
+    "learnMore": "Learn More",
+    "applyNow": "Apply Now",
+    "features": "Features",
+    "close": "Close"
+  },
+  "videos": {
+    "title": "Watch & Explore",
+    "subtitle": "See what student life is like at Kaplan schools around the world",
+    "watchNow": "Watch Now",
+    "allVideos": "All Videos"
+  },
+  "about": {
+    "title": "Why Study with Kaplan?",
+    "subtitle": "World-Class Language Education Since 1938",
+    "description": "For over 80 years, Kaplan has been helping students achieve their goals through language education."
+  },
+  "programs": {
+    "title": "Our Programs",
+    "subtitle": "Find the Perfect Course for You"
+  },
+  "form": {
+    "title": "Get Free Information",
+    "subtitle": "Fill in the form and we will contact you shortly",
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "email": "Email Address",
+    "phone": "Phone Number",
+    "country": "Country",
+    "notes": "Notes / Message",
+    "submit": "Send Application",
+    "sending": "Sending...",
+    "success": "Thank you! We will contact you soon.",
+    "selectCountry": "Select your country",
+    "required": "This field is required",
+    "invalidEmail": "Please enter a valid email address"
+  },
+  "stats": {
+    "students": "Students Worldwide",
+    "countries": "Student Nationalities",
+    "schools": "Schools Worldwide",
+    "years": "Years of Experience"
+  },
+  "testimonials": {
+    "title": "Student Stories",
+    "subtitle": "Hear from our students around the world"
+  },
+  "cta": {
+    "title": "Ready to Start Your Journey?",
+    "description": "Take the first step towards your international education.",
+    "button": "Get Free Consultation"
+  },
+  "footer": {
+    "quickLinks": "Quick Links",
+    "locations": "Top Locations",
+    "contact": "Contact Us",
+    "followUs": "Follow Us",
+    "description": "Kaplan International TV showcases Kaplan language schools worldwide.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service"
+  }
+}
