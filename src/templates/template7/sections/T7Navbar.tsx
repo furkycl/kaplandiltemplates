@@ -46,7 +46,7 @@ export default function T7Navbar() {
             <img
               src="/kaplanlogo.png"
               alt="Kaplan International Languages"
-              className="h-10 sm:h-12 w-auto brightness-0 invert transition-opacity duration-300 group-hover:opacity-80"
+              className="h-14 sm:h-16 w-auto brightness-0 invert transition-opacity duration-300 group-hover:opacity-80"
             />
           </Link>
 

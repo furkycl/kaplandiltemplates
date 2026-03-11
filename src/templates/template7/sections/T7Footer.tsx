@@ -34,7 +34,7 @@ export default function T7Footer() {
               <img
                 src="/kaplanlogo.png"
                 alt="Kaplan International Languages"
-                className="h-10 w-auto brightness-0 invert opacity-80"
+                className="h-14 w-auto brightness-0 invert opacity-80"
               />
             </div>
             <p className="text-sm text-white/35 leading-relaxed font-light max-w-[260px]">
