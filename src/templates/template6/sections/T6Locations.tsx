@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { locationGroups, type Location } from '../../../data/locations';
 import { MapPin } from 'lucide-react';
+import { t } from '../../../utils/i18n';
 
 interface T6LocationsProps {
   onSelectLocation: (location: Location) => void;
@@ -52,16 +53,15 @@ export default function T6Locations({ onSelectLocation }: T6LocationsProps) {
           </div>
 
           <span className="text-[11px] uppercase tracking-[0.4em] text-amber-700/70 font-light">
-            Our Destinations
+            {t('locations.ourDestinations')}
           </span>
 
           <h2 className="mt-4 font-serif text-3xl sm:text-4xl md:text-5xl text-stone-800 leading-tight">
-            Where Will Your Story Unfold?
+            {t('locations.whereWillYourStory')}
           </h2>
 
           <p className="mt-5 text-stone-500 font-light max-w-2xl mx-auto leading-relaxed">
-            From the historic streets of London to the vibrant energy of New York, each destination
-            offers a unique and unforgettable language learning experience.
+            {t('locations.subtitle')}
           </p>
 
           {/* Decorative line below */}
@@ -123,7 +123,7 @@ export default function T6Locations({ onSelectLocation }: T6LocationsProps) {
             className="inline-flex items-center gap-3 text-[11px] uppercase tracking-[0.25em] text-stone-600 hover:text-amber-800 transition-colors duration-300 group"
           >
             <div className="w-8 h-px bg-stone-300 group-hover:bg-amber-600 group-hover:w-12 transition-all duration-300" />
-            <span>View All Destinations</span>
+            <span>{t('locations.viewAllDestinations')}</span>
             <div className="w-8 h-px bg-stone-300 group-hover:bg-amber-600 group-hover:w-12 transition-all duration-300" />
           </button>
         </div>

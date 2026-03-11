@@ -1,5 +1,6 @@
 import { CheckCircle, ArrowRight, Download } from 'lucide-react';
 import { siteContent } from '../../../data/siteContent';
+import { t } from '../../../utils/i18n';
 
 export default function T4Hero() {
   const { hero } = siteContent;
@@ -25,7 +26,7 @@ export default function T4Hero() {
             <div className="inline-flex items-center gap-2 mb-6">
               <span className="h-px w-8 bg-primary" />
               <span className="text-xs font-semibold tracking-[0.2em] uppercase text-primary">
-                Trusted by 1M+ Students Worldwide
+                {t('hero.trustedBy')}
               </span>
             </div>
 
@@ -51,12 +52,12 @@ export default function T4Hero() {
                 onClick={() => handleScrollTo('contact')}
                 className="inline-flex items-center justify-center gap-2 bg-primary hover:bg-primary-dark text-white font-semibold px-8 py-4 rounded-none transition-colors duration-200 text-sm"
               >
-                Request Information
+                {t('hero.ctaRequestInfo')}
                 <ArrowRight className="w-4 h-4" />
               </button>
               <button className="inline-flex items-center justify-center gap-2 border-2 border-slate-900 text-slate-900 hover:bg-slate-900 hover:text-white font-semibold px-8 py-4 rounded-none transition-colors duration-200 text-sm">
                 <Download className="w-4 h-4" />
-                Download Brochure
+                {t('hero.ctaDownloadBrochure')}
               </button>
             </div>
           </div>
@@ -81,7 +82,7 @@ export default function T4Hero() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex items-center justify-between gap-8">
             <span className="text-xs text-slate-400 uppercase tracking-wider font-medium whitespace-nowrap">
-              Accredited by
+              {t('hero.accreditedBy')}
             </span>
             <div className="flex items-center gap-8 overflow-hidden">
               {['British Council', 'ACCET', 'Languages Canada', 'EAQUALS', 'ALTO'].map((name) => (

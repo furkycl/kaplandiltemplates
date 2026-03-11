@@ -1,5 +1,6 @@
 import { Phone, Mail, MapPin, CheckCircle, Shield, Award, Users } from 'lucide-react';
 import LeadForm from '../../../components/LeadForm';
+import { t } from '../../../utils/i18n';
 
 export default function T4LeadSection() {
   const benefits = [
@@ -18,14 +19,14 @@ export default function T4LeadSection() {
           <div className="flex items-center gap-2 mb-3">
             <span className="h-px w-8 bg-primary" />
             <span className="text-xs font-semibold tracking-[0.2em] uppercase text-primary">
-              Get Started
+              {t('cta.getStarted')}
             </span>
           </div>
           <h2 className="text-3xl lg:text-4xl font-bold text-white">
-            Request Information
+            {t('hero.ctaRequestInfo')}
           </h2>
           <p className="text-slate-400 mt-2 max-w-xl">
-            Complete the form below and our education advisors will contact you within 24 hours.
+            {t('cta.requestInfoSubtitle')}
           </p>
         </div>
 
@@ -40,7 +41,7 @@ export default function T4LeadSection() {
             {/* Why Choose Kaplan */}
             <div>
               <h3 className="text-lg font-bold text-white mb-6">
-                Why Choose Kaplan International?
+                {t('cta.whyChooseKaplan')}
               </h3>
               <ul className="space-y-4">
                 {benefits.map((benefit, idx) => (
@@ -57,7 +58,7 @@ export default function T4LeadSection() {
             {/* Contact Details */}
             <div className="border-t border-slate-700 pt-8">
               <h3 className="text-sm font-bold text-white uppercase tracking-wider mb-6">
-                Contact Us Directly
+                {t('cta.contactUsDirectly')}
               </h3>
               <div className="space-y-4">
                 <a

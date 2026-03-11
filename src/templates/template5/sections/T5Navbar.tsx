@@ -1,17 +1,20 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X, ArrowRight } from 'lucide-react';
-import { t } from '../../../utils/i18n';
+import { Menu, X, ArrowRight, Globe, ChevronDown } from 'lucide-react';
+import { t, getSupportedLocales, setLocale, getLocale } from '../../../utils/i18n';
 
 export default function T5Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
+  const [langOpen, setLangOpen] = useState(false);
+  const locales = getSupportedLocales();
+
   const navLinks = [
-    { label: 'Home', href: '#hero' },
-    { label: 'Schools', href: '#locations' },
-    { label: 'Media', href: '#videos' },
-    { label: 'About', href: '#about' },
-    { label: 'Contact', href: '#contact' },
+    { label: t('nav.home'), href: '#hero' },
+    { label: t('nav.schools'), href: '#locations' },
+    { label: t('nav.media'), href: '#videos' },
+    { label: t('nav.about'), href: '#about' },
+    { label: t('nav.contact'), href: '#contact' },
   ];
 
   const handleNavClick = (href: string) => {
@@ -47,15 +50,48 @@ export default function T5Navbar() {
             ))}
           </div>
 
-          {/* CTA */}
+          {/* CTA + Language Switcher */}
           <div className="flex items-center gap-6">
             <button
               onClick={() => handleNavClick('#contact')}
               className="hidden sm:flex items-center gap-2 text-[11px] font-light uppercase tracking-[0.3em] text-white/60 hover:text-secondary transition-colors duration-300 group"
             >
-              <span>{t('nav.contact') === 'nav.contact' ? "Let's Talk" : t('nav.contact')}</span>
+              <span>{t('nav.letsTalk')}</span>
               <ArrowRight className="w-3.5 h-3.5 transform group-hover:translate-x-1 transition-transform duration-300" />
             </button>
+
+            {/* Language Switcher */}
+            <div className="relative">
+              <button
+                onClick={() => setLangOpen(!langOpen)}
+                className="flex items-center gap-1.5 text-[11px] font-light uppercase tracking-[0.3em] text-white/60 hover:text-white transition-colors duration-300"
+              >
+                <Globe className="w-3.5 h-3.5" />
+                <span>{getLocale().toUpperCase()}</span>
+                <ChevronDown className={`w-3 h-3 transition-transform duration-200 ${langOpen ? 'rotate-180' : ''}`} />
+              </button>
+              {langOpen && (
+                <div className="absolute right-0 top-full mt-2 bg-[#0a0a0a] border border-white/10 min-w-[120px] z-50">
+                  {locales.map((locale) => (
+                    <button
+                      key={locale.code}
+                      onClick={() => {
+                        setLocale(locale.code as 'en' | 'tr');
+                        setLangOpen(false);
+                        window.location.reload();
+                      }}
+                      className={`block w-full text-left px-4 py-2.5 text-[11px] uppercase tracking-[0.3em] font-light transition-colors duration-200 ${
+                        getLocale() === locale.code
+                          ? 'text-secondary'
+                          : 'text-white/60 hover:text-white hover:bg-white/5'
+                      }`}
+                    >
+                      {locale.name}
+                    </button>
+                  ))}
+                </div>
+              )}
+            </div>
 
             {/* Mobile Toggle */}
             <button
@@ -92,7 +128,7 @@ export default function T5Navbar() {
                 onClick={() => handleNavClick('#contact')}
                 className="flex items-center gap-2 text-sm font-light uppercase tracking-[0.2em] text-secondary"
               >
-                <span>Let's Talk</span>
+                <span>{t('nav.letsTalk')}</span>
                 <ArrowRight className="w-4 h-4" />
               </button>
             </div>

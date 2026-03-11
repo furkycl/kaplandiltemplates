@@ -101,7 +101,7 @@ export default function T4Navbar() {
                 onClick={() => handleNavClick('#contact')}
                 className="hidden sm:inline-flex bg-primary hover:bg-primary-dark text-white text-sm font-semibold px-6 py-2.5 rounded-none transition-colors duration-200"
               >
-                Request Information
+                {t('hero.ctaRequestInfo')}
               </button>
               <button
                 onClick={() => setMobileOpen(!mobileOpen)}
@@ -132,7 +132,7 @@ export default function T4Navbar() {
                   onClick={() => handleNavClick('#contact')}
                   className="w-full bg-primary hover:bg-primary-dark text-white text-sm font-semibold px-6 py-3 rounded-none transition-colors"
                 >
-                  Request Information
+                  {t('hero.ctaRequestInfo')}
                 </button>
               </div>
             </div>

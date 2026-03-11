@@ -6,14 +6,32 @@
     "about": "Hakkımızda",
     "programs": "Programlar",
     "contact": "İletişim",
-    "applyNow": "Şimdi Başvur"
+    "applyNow": "Şimdi Başvur",
+    "testimonials": "Referanslar",
+    "schools": "Okullar",
+    "media": "Medya",
+    "destinations": "Destinasyonlar",
+    "programmes": "Programlar",
+    "stories": "Hikayeler",
+    "enquire": "Bilgi Al",
+    "letsTalk": "İletişime Geç"
   },
   "hero": {
     "title": "Dünya Genelinde İngilizce Öğrenin",
     "subtitle": "Kaplan International Languages ile",
     "description": "8 ülkedeki dil okullarımızı keşfedin. Öğrenci deneyimlerini izleyin, destinasyonları keşfedin ve uluslararası eğitim yolculuğunuza bugün başlayın.",
     "ctaPrimary": "Şimdi Başvur",
-    "ctaSecondary": "Okulları Keşfet"
+    "ctaSecondary": "Okulları Keşfet",
+    "ctaBeginJourney": "Yolculuğunuza Başlayın",
+    "ctaExploreNow": "Şimdi Keşfet",
+    "ctaRequestInfo": "Bilgi Talep Et",
+    "ctaDownloadBrochure": "Broşür İndir",
+    "learn": "ÖĞREN",
+    "english": "İNGİLİZCE",
+    "scroll": "Kaydır",
+    "trustedBy": "Dünya Genelinde 1M+ Öğrenci Tarafından Tercih Ediliyor",
+    "accreditedBy": "Akredite Eden Kuruluşlar",
+    "countriesSchools": "8 Ülke / 35+ Okul"
   },
   "locations": {
     "title": "Dünya Genelindeki Okullarımız",
@@ -22,22 +40,62 @@
     "learnMore": "Daha Fazla",
     "applyNow": "Şimdi Başvur",
     "features": "Özellikler",
-    "close": "Kapat"
+    "close": "Kapat",
+    "searchPlaceholder": "Lokasyon ara...",
+    "viewAllDestinations": "Tüm Destinasyonları Gör",
+    "globalNetwork": "Küresel Ağ",
+    "schoolDirectory": "Okul Rehberi",
+    "directorySubtitle": "Dünya genelindeki akredite dil okullarımıza göz atın.",
+    "location": "Lokasyon",
+    "country": "Ülke",
+    "region": "Bölge",
+    "action": "İşlem",
+    "viewDetails": "Detayları Gör",
+    "school": "okul",
+    "schools": "okul",
+    "noResults": "Aramanızla eşleşen lokasyon bulunamadı.",
+    "showing": "Gösterilen",
+    "locationsAcross": "lokasyon,",
+    "regions": "bölge",
+    "ourDestinations": "Destinasyonlarımız",
+    "whereWillYourStory": "Hikayeniz Nerede Başlayacak?",
+    "whereTo": "NEREYE?",
+    "destinations": "Destinasyonlar"
   },
   "videos": {
     "title": "İzle & Keşfet",
     "subtitle": "Kaplan okullarında öğrenci hayatının nasıl olduğunu görün",
     "watchNow": "Şimdi İzle",
-    "allVideos": "Tüm Videolar"
+    "allVideos": "Tüm Videolar",
+    "mediaLibrary": "Medya Kütüphanesi",
+    "videosResources": "Videolar & Kaynaklar",
+    "videosSubtitle": "Öğrenci deneyimlerini, kampüs turlarını ve program tanıtımlarını keşfedin.",
+    "watch": "İzle",
+    "media": "MEDYA",
+    "films": "Film",
+    "visualStories": "Görsel Hikayeler",
+    "experienceJourney": "Yolculuğu Deneyimleyin"
   },
   "about": {
     "title": "Neden Kaplan?",
     "subtitle": "1938'den Beri Dünya Standartlarında Dil Eğitimi",
-    "description": "80 yılı aşkın süredir Kaplan, dil eğitimi ile öğrencilerin hedeflerine ulaşmasına yardımcı oluyor."
+    "description": "80 yılı aşkın süredir Kaplan, dil eğitimi ile öğrencilerin hedeflerine ulaşmasına yardımcı oluyor.",
+    "whyKaplan": "Neden Kaplan",
+    "whyChooseUs": "Neden Bizi Seçmelisiniz",
+    "whyKaplanQuestion": "NEDEN KAPLAN?",
+    "qualityAssurance": "Kalite Güvencesi",
+    "studentSatisfaction": "Öğrenci Memnuniyet Oranı"
   },
   "programs": {
     "title": "Programlarımız",
-    "subtitle": "Size En Uygun Kursu Bulun"
+    "subtitle": "Size En Uygun Kursu Bulun",
+    "courseCatalog": "Kurs Kataloğu",
+    "viewAll": "Tüm Programları Gör",
+    "learnMore": "Daha Fazla",
+    "whatWeOffer": "Sunduklarımız",
+    "notSure": "Hangi programın size uygun olduğundan emin değil misiniz?",
+    "notSureDesc": "Eğitim danışmanlarımız hedeflerinize ve seviyenize göre mükemmel kursu bulmanıza yardımcı olabilir.",
+    "getFreeConsultation": "Ücretsiz Danışmanlık Alın"
   },
   "form": {
     "title": "Ücretsiz Bilgi Alın",
@@ -59,16 +117,34 @@
     "students": "Dünya Genelinde Öğrenci",
     "countries": "Öğrenci Milliyeti",
     "schools": "Dünya Genelinde Okul",
-    "years": "Yıllık Deneyim"
+    "years": "Yıllık Deneyim",
+    "schoolsGlobally": "Küresel Okul",
+    "yearsExcellence": "Yıllık Mükemmellik",
+    "nationalities": "Milliyet",
+    "theNumbers": "Rakamlarla"
   },
   "testimonials": {
     "title": "Öğrenci Hikayeleri",
-    "subtitle": "Dünyanın dört bir yanından öğrencilerimizi dinleyin"
+    "subtitle": "Dünyanın dört bir yanından öğrencilerimizi dinleyin",
+    "studentTestimonials": "Öğrenci Görüşleri",
+    "whatStudentsSay": "Öğrencilerimiz Ne Diyor",
+    "stories": "Hikayeler",
+    "voicesOfExperience": "Deneyim Sesleri"
   },
   "cta": {
     "title": "Yolculuğunuza Başlamaya Hazır mısınız?",
     "description": "Uluslararası eğitiminize doğru ilk adımı atın.",
-    "button": "Ücretsiz Danışmanlık Alın"
+    "button": "Ücretsiz Danışmanlık Alın",
+    "getStarted": "Başlayın",
+    "enquireNow": "Şimdi Bilgi Alın",
+    "freeConsultation": "Ücretsiz danışmanlık, taahhüt yok",
+    "getInTouch": "İletişime Geçin",
+    "contactUsDirectly": "Doğrudan Bize Ulaşın",
+    "whyChooseKaplan": "Neden Kaplan International?",
+    "requestInfoSubtitle": "Aşağıdaki formu doldurun, eğitim danışmanlarımız 24 saat içinde sizinle iletişime geçecektir.",
+    "beginYourJourney": "Yolculuğunuza Başlayın",
+    "letsTalk": "İLETİŞİM",
+    "since1938": "1938'den Beri"
   },
   "footer": {
     "quickLinks": "Hızlı Bağlantılar",
@@ -77,6 +153,16 @@
     "followUs": "Bizi Takip Edin",
     "description": "Kaplan International TV, dünya genelindeki Kaplan dil okullarını tanıtır.",
     "privacy": "Gizlilik Politikası",
-    "terms": "Kullanım Koşulları"
+    "terms": "Kullanım Koşulları",
+    "programs": "Programlar",
+    "resources": "Kaynaklar",
+    "explore": "Keşfet",
+    "destinations": "Destinasyonlar",
+    "cookiePolicy": "Çerez Politikası",
+    "accessibility": "Erişilebilirlik",
+    "sitemap": "Site Haritası"
+  },
+  "language": {
+    "switchLabel": "Dil"
   }
 }

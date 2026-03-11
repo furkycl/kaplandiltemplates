@@ -1,5 +1,6 @@
 import { ArrowRight } from 'lucide-react';
 import { siteContent } from '../../../data/siteContent';
+import { t } from '../../../utils/i18n';
 
 export default function T5Hero() {
   return (
@@ -33,12 +34,12 @@ export default function T5Hero() {
               <h1
                 className="text-[5rem] sm:text-[8rem] md:text-[10rem] lg:text-[12rem] xl:text-[14rem] font-black leading-[0.85] tracking-tighter text-white select-none"
               >
-                LEARN
+                {t('hero.learn')}
               </h1>
               <h1
                 className="text-[5rem] sm:text-[8rem] md:text-[10rem] lg:text-[12rem] xl:text-[14rem] font-black leading-[0.85] tracking-tighter text-secondary select-none"
               >
-                ENGLISH
+                {t('hero.english')}
               </h1>
             </div>
 
@@ -59,7 +60,7 @@ export default function T5Hero() {
                 className="group inline-flex items-center gap-3 text-white hover:text-secondary transition-colors duration-300"
               >
                 <span className="text-sm uppercase tracking-[0.2em] font-light">
-                  Explore Now
+                  {t('hero.ctaExploreNow')}
                 </span>
                 <ArrowRight className="w-4 h-4 transform group-hover:translate-x-2 transition-transform duration-300" />
                 <span className="block w-16 h-[1px] bg-secondary" />
@@ -81,7 +82,7 @@ export default function T5Hero() {
               {/* Overlay text */}
               <div className="absolute bottom-6 left-6">
                 <span className="text-[10px] uppercase tracking-[0.3em] text-white/80 font-light bg-black/60 px-3 py-1.5">
-                  8 Countries / 35+ Schools
+                  {t('hero.countriesSchools')}
                 </span>
               </div>
             </div>
@@ -92,7 +93,7 @@ export default function T5Hero() {
       {/* Scroll indicator */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-3">
         <span className="text-[9px] uppercase tracking-[0.4em] text-white/30 font-light">
-          Scroll
+          {t('hero.scroll')}
         </span>
         <div className="w-[1px] h-12 bg-gradient-to-b from-white/30 to-transparent" />
       </div>

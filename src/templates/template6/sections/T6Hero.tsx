@@ -1,5 +1,6 @@
 import { ChevronDown } from 'lucide-react';
 import { siteContent } from '../../../data/siteContent';
+import { t } from '../../../utils/i18n';
 
 export default function T6Hero() {
   const { hero } = siteContent;
@@ -43,7 +44,7 @@ export default function T6Hero() {
             onClick={() => handleScroll('contact')}
             className="mt-10 inline-flex items-center gap-3 text-[12px] uppercase tracking-[0.25em] text-white/90 border border-white/40 px-8 py-4 hover:bg-white hover:text-stone-900 transition-all duration-500 group"
           >
-            <span>Begin Your Journey</span>
+            <span>{t('hero.ctaBeginJourney')}</span>
             <ChevronDown className="w-4 h-4 transform group-hover:translate-y-0.5 transition-transform duration-300" />
           </button>
         </div>
@@ -52,7 +53,7 @@ export default function T6Hero() {
       {/* Scroll indicator */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-3">
         <span className="text-[9px] uppercase tracking-[0.4em] text-white/40">
-          Scroll
+          {t('hero.scroll')}
         </span>
         <ChevronDown className="w-5 h-5 text-white/40 animate-bounce" />
       </div>

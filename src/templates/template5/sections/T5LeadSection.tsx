@@ -1,4 +1,5 @@
 import LeadForm from '../../../components/LeadForm';
+import { t } from '../../../utils/i18n';
 
 export default function T5LeadSection() {
   return (
@@ -18,14 +19,14 @@ export default function T5LeadSection() {
           {/* Left: Massive text */}
           <div className="lg:col-span-5 xl:col-span-6">
             <span className="text-[10px] uppercase tracking-[0.4em] text-black/30 font-light">
-              Get in Touch
+              {t('cta.getInTouch')}
             </span>
 
             <div className="mt-8 lg:mt-12">
               <h2 className="text-6xl sm:text-7xl md:text-8xl lg:text-[6rem] xl:text-[8rem] font-black text-gray-100 leading-[0.9] tracking-tighter select-none">
-                LET'S
+                {t('cta.letsTalk').split('\n')[0] || t('cta.letsTalk')}
                 <br />
-                <span className="text-[#0a0a0a]">TALK</span>
+                <span className="text-[#0a0a0a]">{t('cta.letsTalk').split('\n')[1] || ''}</span>
               </h2>
             </div>
 
@@ -43,7 +44,7 @@ export default function T5LeadSection() {
               <div className="flex items-center gap-4">
                 <div className="w-16 h-[2px] bg-secondary" />
                 <span className="text-[10px] uppercase tracking-[0.3em] text-black/30 font-light">
-                  Since 1938
+                  {t('cta.since1938')}
                 </span>
               </div>
             </div>
@@ -58,10 +59,10 @@ export default function T5LeadSection() {
 
               <div className="mb-8">
                 <h3 className="text-xl font-bold text-[#0a0a0a] tracking-tight">
-                  Request Information
+                  {t('hero.ctaRequestInfo')}
                 </h3>
                 <p className="mt-2 text-sm text-gray-400 font-light">
-                  Free consultation, no commitment
+                  {t('cta.freeConsultation')}
                 </p>
               </div>
 

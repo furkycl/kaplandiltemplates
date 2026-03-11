@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import { t } from '../../../utils/i18n';
-import { Menu, X } from 'lucide-react';
+import { t, getSupportedLocales, setLocale, getLocale } from '../../../utils/i18n';
+import { Menu, X, Globe } from 'lucide-react';
 
 const navLinks = [
   { label: () => t('nav.home'), href: '#' },
@@ -13,6 +13,8 @@ const navLinks = [
 
 export default function T3Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [langOpen, setLangOpen] = useState(false);
+  const locales = getSupportedLocales();
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-black/50 backdrop-blur-xl border-b border-white/5">
@@ -38,14 +40,40 @@ export default function T3Navbar() {
             ))}
           </div>
 
-          {/* CTA */}
-          <div className="hidden lg:block">
+          {/* CTA + Language */}
+          <div className="hidden lg:flex items-center gap-3">
             <a
               href="#contact"
               className="inline-flex items-center px-5 py-2.5 text-sm font-semibold text-white rounded-full bg-gradient-to-r from-secondary to-orange-500 hover:from-secondary-dark hover:to-orange-600 transition-all duration-300 shadow-lg shadow-secondary/25 hover:shadow-secondary/40 hover:scale-105"
             >
-              Get Started
+              {t('cta.getStarted')}
             </a>
+            <div className="relative">
+              <button
+                onClick={() => setLangOpen(!langOpen)}
+                className="flex items-center gap-1.5 text-sm text-white/60 hover:text-white transition-colors px-2 py-1.5 rounded-lg hover:bg-white/5"
+              >
+                <Globe className="w-4 h-4" />
+                <span className="text-xs font-medium">{getLocale().toUpperCase()}</span>
+              </button>
+              {langOpen && (
+                <div className="absolute right-0 top-full mt-1 bg-gray-900 shadow-lg border border-white/10 rounded-lg min-w-[120px] py-1 z-50">
+                  {locales.map((locale) => (
+                    <button
+                      key={locale.code}
+                      onClick={() => {
+                        setLocale(locale.code);
+                        setLangOpen(false);
+                        window.location.reload();
+                      }}
+                      className="block w-full text-left px-4 py-2 text-sm text-white/70 hover:bg-white/10 hover:text-white transition-colors"
+                    >
+                      {locale.name}
+                    </button>
+                  ))}
+                </div>
+              )}
+            </div>
           </div>
 
           {/* Mobile hamburger */}
@@ -79,7 +107,7 @@ export default function T3Navbar() {
                 onClick={() => setMobileOpen(false)}
                 className="block w-full text-center px-5 py-3 text-sm font-semibold text-white rounded-full bg-gradient-to-r from-secondary to-orange-500 hover:from-secondary-dark hover:to-orange-600 transition-all duration-300"
               >
-                Get Started
+                {t('cta.getStarted')}
               </a>
             </div>
           </div>

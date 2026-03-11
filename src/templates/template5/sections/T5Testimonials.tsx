@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 import { siteContent } from '../../../data/siteContent';
+import { t } from '../../../utils/i18n';
 
 export default function T5Testimonials() {
   const [current, setCurrent] = useState(0);
@@ -16,7 +17,7 @@ export default function T5Testimonials() {
         {/* Section label */}
         <div className="mb-16 lg:mb-20">
           <span className="text-[10px] uppercase tracking-[0.4em] text-black/30 font-light">
-            Stories
+            {t('testimonials.stories')}
           </span>
         </div>
 

@@ -1,5 +1,6 @@
 import { Globe, BookOpen, Users, Award, Home, TrendingUp } from 'lucide-react';
 import { siteContent } from '../../../data/siteContent';
+import { t } from '../../../utils/i18n';
 
 const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
   globe: Globe,
@@ -21,7 +22,7 @@ export default function T4About() {
           <div className="flex items-center gap-2 mb-3">
             <span className="h-px w-8 bg-primary" />
             <span className="text-xs font-semibold tracking-[0.2em] uppercase text-primary">
-              Why Kaplan
+              {t('about.whyKaplan')}
             </span>
           </div>
           <h2 className="text-3xl lg:text-4xl font-bold text-slate-900">
@@ -84,7 +85,7 @@ export default function T4About() {
                 <div className="absolute -bottom-6 -left-6 bg-slate-900 p-6">
                   <div className="text-3xl font-bold text-white">97%</div>
                   <div className="text-sm text-slate-400 mt-1">
-                    Student Satisfaction Rate
+                    {t('about.studentSatisfaction')}
                   </div>
                 </div>
               </div>
@@ -104,7 +105,7 @@ export default function T4About() {
               {/* Accreditation Note */}
               <div className="mt-8 p-6 bg-slate-50 border border-slate-200">
                 <p className="text-xs text-slate-500 uppercase tracking-wider font-semibold mb-2">
-                  Quality Assurance
+                  {t('about.qualityAssurance')}
                 </p>
                 <p className="text-sm text-slate-600">
                   All Kaplan International schools are accredited by leading educational bodies, ensuring the highest quality standards in language education.

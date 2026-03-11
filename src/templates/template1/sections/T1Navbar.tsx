@@ -1,10 +1,12 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X } from 'lucide-react';
-import { t } from '../../../utils/i18n';
+import { Menu, X, Globe, ChevronDown } from 'lucide-react';
+import { t, getSupportedLocales, setLocale, getLocale } from '../../../utils/i18n';
 
 export default function T1Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [langOpen, setLangOpen] = useState(false);
+  const locales = getSupportedLocales();
 
   const navLinks = [
     { label: t('nav.home'), href: '#hero' },
@@ -41,6 +43,35 @@ export default function T1Navbar() {
             >
               {t('nav.applyNow')}
             </a>
+
+            {/* Language Switcher */}
+            <div className="relative ml-2">
+              <button
+                onClick={() => setLangOpen(!langOpen)}
+                className="flex items-center gap-1.5 text-sm text-gray-500 hover:text-primary transition-colors px-2 py-1.5 rounded-lg hover:bg-gray-100"
+              >
+                <Globe className="w-4 h-4" />
+                <span className="text-xs font-medium">{getLocale().toUpperCase()}</span>
+                <ChevronDown className="w-3 h-3" />
+              </button>
+              {langOpen && (
+                <div className="absolute right-0 top-full mt-1 bg-white shadow-lg border border-gray-200 rounded-lg min-w-[120px] py-1 z-50">
+                  {locales.map((locale) => (
+                    <button
+                      key={locale.code}
+                      onClick={() => {
+                        setLocale(locale.code);
+                        setLangOpen(false);
+                        window.location.reload();
+                      }}
+                      className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary transition-colors"
+                    >
+                      {locale.name}
+                    </button>
+                  ))}
+                </div>
+              )}
+            </div>
           </div>
 
           {/* Mobile Menu Button */}

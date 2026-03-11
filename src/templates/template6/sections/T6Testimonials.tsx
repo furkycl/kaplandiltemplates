@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { siteContent } from '../../../data/siteContent';
+import { t } from '../../../utils/i18n';
 
 export default function T6Testimonials() {
   const { testimonials } = siteContent;
@@ -35,7 +36,7 @@ export default function T6Testimonials() {
             <div className="flex items-center justify-center gap-4 mb-12">
               <div className="w-12 h-px bg-amber-600/40" />
               <span className="text-[11px] uppercase tracking-[0.4em] text-amber-700/70 font-light">
-                Voices of Experience
+                {t('testimonials.voicesOfExperience')}
               </span>
               <div className="w-12 h-px bg-amber-600/40" />
             </div>

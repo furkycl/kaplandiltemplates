@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Play, X, Clock, Tag } from 'lucide-react';
 import { videos } from '../../../data/videos';
+import { t } from '../../../utils/i18n';
 
 export default function T4Videos() {
   const [activeVideo, setActiveVideo] = useState<string | null>(null);
@@ -15,14 +16,14 @@ export default function T4Videos() {
           <div className="flex items-center gap-2 mb-3">
             <span className="h-px w-8 bg-primary" />
             <span className="text-xs font-semibold tracking-[0.2em] uppercase text-primary">
-              Media Library
+              {t('videos.mediaLibrary')}
             </span>
           </div>
           <h2 className="text-3xl lg:text-4xl font-bold text-slate-900">
-            Videos & Resources
+            {t('videos.videosResources')}
           </h2>
           <p className="text-slate-600 mt-2">
-            Explore student experiences, campus tours, and program overviews.
+            {t('videos.videosSubtitle')}
           </p>
         </div>
 

@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Play } from 'lucide-react';
 import { videos } from '../../../data/videos';
+import { t } from '../../../utils/i18n';
 
 export default function T6Videos() {
   const [activeVideo, setActiveVideo] = useState(videos[0]);
@@ -18,16 +19,15 @@ export default function T6Videos() {
           </div>
 
           <span className="text-[11px] uppercase tracking-[0.4em] text-amber-700/70 font-light">
-            Visual Stories
+            {t('videos.visualStories')}
           </span>
 
           <h2 className="mt-4 font-serif text-3xl sm:text-4xl md:text-5xl text-stone-800 leading-tight">
-            Experience The Journey
+            {t('videos.experienceJourney')}
           </h2>
 
           <p className="mt-5 text-stone-500 font-light max-w-2xl mx-auto leading-relaxed">
-            Immerse yourself in the stories of students who have transformed their lives through the
-            art of language and the beauty of cultural discovery.
+            {t('videos.subtitle')}
           </p>
         </div>
 

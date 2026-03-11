@@ -1,10 +1,12 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X, GraduationCap } from 'lucide-react';
-import { t } from '../../../utils/i18n';
+import { Menu, X, GraduationCap, Globe, ChevronDown } from 'lucide-react';
+import { t, getSupportedLocales, setLocale, getLocale } from '../../../utils/i18n';
 
 export default function T2Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [langOpen, setLangOpen] = useState(false);
+  const locales = getSupportedLocales();
 
   const navLinks = [
     { label: t('nav.home'), href: '#hero' },
@@ -26,6 +28,33 @@ export default function T2Navbar() {
           <div className="hidden sm:flex items-center gap-4 text-xs opacity-80">
             <span>info@kaplaninternational.com</span>
             <span>+44 20 7045 5000</span>
+            <div className="relative">
+              <button
+                onClick={() => setLangOpen(!langOpen)}
+                className="flex items-center gap-1 hover:opacity-100 transition-opacity"
+              >
+                <Globe className="w-3 h-3" />
+                <span>{getLocale().toUpperCase()}</span>
+                <ChevronDown className="w-3 h-3" />
+              </button>
+              {langOpen && (
+                <div className="absolute right-0 top-full mt-1 bg-white text-gray-900 shadow-lg border border-gray-200 rounded-md min-w-[120px] py-1 z-50">
+                  {locales.map((locale) => (
+                    <button
+                      key={locale.code}
+                      onClick={() => {
+                        setLocale(locale.code);
+                        setLangOpen(false);
+                        window.location.reload();
+                      }}
+                      className="block w-full text-left px-4 py-2 text-xs hover:bg-primary-light hover:text-primary transition-colors"
+                    >
+                      {locale.name}
+                    </button>
+                  ))}
+                </div>
+              )}
+            </div>
           </div>
         </div>
       </div>

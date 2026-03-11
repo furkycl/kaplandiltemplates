@@ -1,13 +1,14 @@
 import { siteContent } from '../../../data/siteContent';
+import { t } from '../../../utils/i18n';
 
 export default function T4Stats() {
   const { stats } = siteContent;
 
   const statItems = [
-    { value: stats.students, label: 'Students Worldwide' },
-    { value: stats.countries, label: 'Student Nationalities' },
-    { value: stats.schools, label: 'Schools Globally' },
-    { value: stats.years, label: 'Years of Excellence' },
+    { value: stats.students, label: t('stats.students') },
+    { value: stats.countries, label: t('stats.countries') },
+    { value: stats.schools, label: t('stats.schoolsGlobally') },
+    { value: stats.years, label: t('stats.yearsExcellence') },
   ];
 
   return (

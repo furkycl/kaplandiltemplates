@@ -1,11 +1,13 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X } from 'lucide-react';
-import { t } from '../../../utils/i18n';
+import { Menu, X, Globe } from 'lucide-react';
+import { t, getSupportedLocales, setLocale, getLocale } from '../../../utils/i18n';
 
 export default function T6Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [langOpen, setLangOpen] = useState(false);
+  const locales = getSupportedLocales();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 60);
@@ -14,15 +16,15 @@ export default function T6Navbar() {
   }, []);
 
   const leftLinks = [
-    { label: 'Destinations', href: '#locations' },
-    { label: 'Programmes', href: '#programs' },
-    { label: 'Stories', href: '#videos' },
+    { label: t('nav.destinations'), href: '#locations' },
+    { label: t('nav.programmes'), href: '#programs' },
+    { label: t('nav.stories'), href: '#videos' },
   ];
 
   const rightLinks = [
-    { label: 'About', href: '#about' },
-    { label: 'Testimonials', href: '#testimonials' },
-    { label: 'Enquire', href: '#contact' },
+    { label: t('nav.about'), href: '#about' },
+    { label: t('nav.testimonials'), href: '#testimonials' },
+    { label: t('nav.enquire'), href: '#contact' },
   ];
 
   const allLinks = [...leftLinks, ...rightLinks];
@@ -104,8 +106,45 @@ export default function T6Navbar() {
                   : 'border-white/60 text-white/80 hover:bg-white hover:text-stone-900'
               }`}
             >
-              {t('nav.contact') === 'nav.contact' ? 'Enquire' : t('nav.contact')}
+              {t('nav.enquire')}
             </button>
+
+            {/* Language Switcher */}
+            <div className="relative">
+              <button
+                onClick={() => setLangOpen(!langOpen)}
+                className={`flex items-center gap-1.5 text-[11px] uppercase tracking-[0.15em] transition-colors duration-300 ${
+                  scrolled
+                    ? 'text-stone-400 hover:text-stone-700'
+                    : 'text-white/50 hover:text-white/80'
+                }`}
+                aria-label="Select language"
+              >
+                <Globe className="w-3.5 h-3.5" />
+                <span className="font-serif">{getLocale().toUpperCase()}</span>
+              </button>
+              {langOpen && (
+                <div className="absolute right-0 top-full mt-3 bg-[#FFFBF0] border border-stone-200 shadow-lg rounded-sm overflow-hidden min-w-[120px]">
+                  {locales.map((locale) => (
+                    <button
+                      key={locale.code}
+                      onClick={() => {
+                        setLocale(locale.code);
+                        setLangOpen(false);
+                        window.location.reload();
+                      }}
+                      className={`w-full text-left px-4 py-2.5 text-[11px] tracking-wider font-serif transition-colors duration-200 ${
+                        getLocale() === locale.code
+                          ? 'text-amber-700 bg-amber-50/50'
+                          : 'text-stone-500 hover:text-stone-800 hover:bg-stone-50'
+                      }`}
+                    >
+                      {locale.name}
+                    </button>
+                  ))}
+                </div>
+              )}
+            </div>
           </div>
 
           {/* Mobile Toggle */}
@@ -148,7 +187,7 @@ export default function T6Navbar() {
                 onClick={() => handleNavClick('#contact')}
                 className="text-[11px] uppercase tracking-[0.2em] px-6 py-3 border border-stone-800 text-stone-800 hover:bg-stone-800 hover:text-white transition-all duration-300"
               >
-                Begin Your Journey
+                {t('hero.ctaBeginJourney')}
               </button>
             </div>
           </div>

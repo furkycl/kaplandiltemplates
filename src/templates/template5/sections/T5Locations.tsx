@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { ArrowRight, MapPin } from 'lucide-react';
 import { locationGroups, type Location } from '../../../data/locations';
+import { t } from '../../../utils/i18n';
 
 interface T5LocationsProps {
   onSelectLocation: (location: Location) => void;
@@ -19,12 +20,12 @@ export default function T5Locations({ onSelectLocation }: T5LocationsProps) {
         {/* Section header */}
         <div className="mb-20 lg:mb-28">
           <span className="text-[10px] uppercase tracking-[0.4em] text-white/30 font-light">
-            Destinations
+            {t('locations.destinations')}
           </span>
           <h2 className="mt-6 text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-black text-white tracking-tighter leading-none">
-            WHERE
+            {t('locations.whereTo').split('\n')[0] || t('locations.whereTo')}
             <br />
-            <span className="text-secondary">TO?</span>
+            <span className="text-secondary">{t('locations.whereTo').split('\n')[1] || ''}</span>
           </h2>
         </div>
 
@@ -48,7 +49,7 @@ export default function T5Locations({ onSelectLocation }: T5LocationsProps) {
                     {group.region}
                   </h3>
                   <span className="text-sm text-white/30 font-light">
-                    {group.locations.length} {group.locations.length === 1 ? 'school' : 'schools'}
+                    {group.locations.length} {group.locations.length === 1 ? t('locations.school') : t('locations.schools')}
                   </span>
                 </div>
                 <div className="flex items-center gap-3">

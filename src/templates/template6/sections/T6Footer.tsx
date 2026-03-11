@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { Facebook, Instagram, Youtube, Twitter, Linkedin } from 'lucide-react';
 import { siteContent } from '../../../data/siteContent';
+import { t } from '../../../utils/i18n';
 
 export default function T6Footer() {
   const { footer } = siteContent;
@@ -23,7 +24,7 @@ export default function T6Footer() {
 
   const footerColumns = [
     {
-      title: 'Explore',
+      title: t('footer.explore'),
       links: [
         { label: 'Our Story', href: '#about' },
         { label: 'Programmes', href: '#programs' },
@@ -32,7 +33,7 @@ export default function T6Footer() {
       ],
     },
     {
-      title: 'Destinations',
+      title: t('footer.destinations'),
       links: [
         { label: 'United Kingdom', href: '#locations' },
         { label: 'United States', href: '#locations' },
@@ -41,7 +42,7 @@ export default function T6Footer() {
       ],
     },
     {
-      title: 'Programmes',
+      title: t('footer.programs'),
       links: [
         { label: 'General English', href: '#programs' },
         { label: 'Intensive English', href: '#programs' },
@@ -50,7 +51,7 @@ export default function T6Footer() {
       ],
     },
     {
-      title: 'Contact',
+      title: t('footer.contact'),
       links: [
         { label: 'Enquire Now', href: '#contact' },
         { label: 'Speak to an Advisor', href: '#contact' },
@@ -130,10 +131,10 @@ export default function T6Footer() {
           </p>
           <div className="flex items-center gap-6">
             <button className="text-[11px] text-stone-600 hover:text-stone-400 font-light tracking-wider transition-colors duration-300">
-              Privacy Policy
+              {t('footer.privacy')}
             </button>
             <button className="text-[11px] text-stone-600 hover:text-stone-400 font-light tracking-wider transition-colors duration-300">
-              Terms of Service
+              {t('footer.terms')}
             </button>
           </div>
         </div>

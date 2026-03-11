@@ -1,11 +1,12 @@
 import { siteContent } from '../../../data/siteContent';
+import { t } from '../../../utils/i18n';
 
 export default function T5Stats() {
   const stats = [
-    { value: siteContent.stats.students, label: 'Students Worldwide' },
-    { value: siteContent.stats.countries, label: 'Nationalities' },
-    { value: siteContent.stats.schools, label: 'Schools Globally' },
-    { value: siteContent.stats.years, label: 'Years of Excellence' },
+    { value: siteContent.stats.students, label: t('stats.students') },
+    { value: siteContent.stats.countries, label: t('stats.nationalities') },
+    { value: siteContent.stats.schools, label: t('stats.schoolsGlobally') },
+    { value: siteContent.stats.years, label: t('stats.yearsExcellence') },
   ];
 
   return (
@@ -14,7 +15,7 @@ export default function T5Stats() {
         {/* Section label */}
         <div className="mb-16 lg:mb-24">
           <span className="text-[10px] uppercase tracking-[0.4em] text-black/30 font-light">
-            The Numbers
+            {t('stats.theNumbers')}
           </span>
         </div>
 

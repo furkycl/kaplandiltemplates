@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Quote, ChevronLeft, ChevronRight } from 'lucide-react';
 import { siteContent } from '../../../data/siteContent';
+import { t } from '../../../utils/i18n';
 
 export default function T4Testimonials() {
   const { testimonials } = siteContent;
@@ -22,11 +23,11 @@ export default function T4Testimonials() {
           <div className="flex items-center gap-2 mb-3">
             <span className="h-px w-8 bg-primary" />
             <span className="text-xs font-semibold tracking-[0.2em] uppercase text-primary">
-              Student Testimonials
+              {t('testimonials.studentTestimonials')}
             </span>
           </div>
           <h2 className="text-3xl lg:text-4xl font-bold text-slate-900">
-            What Our Students Say
+            {t('testimonials.whatStudentsSay')}
           </h2>
         </div>
 

@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { Facebook, Instagram, Youtube, Twitter, Linkedin } from 'lucide-react';
 import { siteContent } from '../../../data/siteContent';
+import { t } from '../../../utils/i18n';
 
 const socialIcons: Record<string, React.ElementType> = {
   facebook: Facebook,
@@ -14,11 +15,11 @@ export default function T5Footer() {
   const { footer } = siteContent;
 
   const footerLinks = [
-    { label: 'Schools', href: '#locations' },
-    { label: 'Programs', href: '#programs' },
-    { label: 'About', href: '#about' },
-    { label: 'Contact', href: '#contact' },
-    { label: 'Privacy', href: '#' },
+    { label: t('nav.schools'), href: '#locations' },
+    { label: t('nav.programs'), href: '#programs' },
+    { label: t('nav.about'), href: '#about' },
+    { label: t('nav.contact'), href: '#contact' },
+    { label: t('footer.privacy'), href: '#' },
   ];
 
   const handleNavClick = (href: string) => {

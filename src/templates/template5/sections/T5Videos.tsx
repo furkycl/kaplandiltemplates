@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Play, X, Clock } from 'lucide-react';
 import { videos } from '../../../data/videos';
+import { t } from '../../../utils/i18n';
 
 export default function T5Videos() {
   const [activeVideo, setActiveVideo] = useState<string | null>(null);
@@ -16,14 +17,14 @@ export default function T5Videos() {
         <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6 mb-16 lg:mb-20">
           <div>
             <span className="text-[10px] uppercase tracking-[0.4em] text-white/30 font-light">
-              Watch
+              {t('videos.watch')}
             </span>
             <h2 className="mt-6 text-5xl sm:text-6xl lg:text-7xl font-black text-white tracking-tighter leading-none">
-              MEDIA
+              {t('videos.media')}
             </h2>
           </div>
           <span className="text-[10px] uppercase tracking-[0.3em] text-white/30 font-light">
-            {videos.length} Films
+            {videos.length} {t('videos.films')}
           </span>
         </div>
 

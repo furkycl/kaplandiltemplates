@@ -1,5 +1,6 @@
 import { MessageCircle, Zap, Briefcase, FileText, Calendar, Monitor, ArrowRight } from 'lucide-react';
 import { siteContent } from '../../../data/siteContent';
+import { t } from '../../../utils/i18n';
 
 const iconMap: Record<string, React.ElementType> = {
   'message-circle': MessageCircle,
@@ -19,10 +20,10 @@ export default function T5Programs() {
         {/* Section header */}
         <div className="mb-20 lg:mb-28">
           <span className="text-[10px] uppercase tracking-[0.4em] text-white/30 font-light">
-            What We Offer
+            {t('programs.whatWeOffer')}
           </span>
           <h2 className="mt-6 text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-black text-white tracking-tighter leading-none">
-            PROGRAMS
+            {t('programs.title')}
           </h2>
         </div>
 

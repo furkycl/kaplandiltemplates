@@ -1,5 +1,6 @@
 import { MessageCircle, Zap, Briefcase, FileText, Calendar, Monitor, ArrowRight } from 'lucide-react';
 import { siteContent } from '../../../data/siteContent';
+import { t } from '../../../utils/i18n';
 
 const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
   'message-circle': MessageCircle,
@@ -21,7 +22,7 @@ export default function T4Programs() {
           <div className="flex items-center gap-2 mb-3">
             <span className="h-px w-8 bg-primary" />
             <span className="text-xs font-semibold tracking-[0.2em] uppercase text-primary">
-              Course Catalog
+              {t('programs.courseCatalog')}
             </span>
           </div>
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4">
@@ -34,7 +35,7 @@ export default function T4Programs() {
               </p>
             </div>
             <button className="inline-flex items-center gap-2 text-sm font-semibold text-primary hover:text-primary-dark transition-colors">
-              View All Programs
+              {t('programs.viewAll')}
               <ArrowRight className="w-4 h-4" />
             </button>
           </div>
@@ -68,7 +69,7 @@ export default function T4Programs() {
 
                   {/* Action */}
                   <div className="flex items-center gap-2 text-sm font-semibold text-primary group-hover:gap-3 transition-all duration-200">
-                    <span>Learn More</span>
+                    <span>{t('programs.learnMore')}</span>
                     <ArrowRight className="w-4 h-4" />
                   </div>
                 </div>
@@ -80,9 +81,9 @@ export default function T4Programs() {
         {/* Bottom CTA */}
         <div className="mt-12 p-8 bg-white border border-slate-200 flex flex-col md:flex-row items-center justify-between gap-6">
           <div>
-            <h3 className="text-lg font-bold text-slate-900">Not sure which program is right for you?</h3>
+            <h3 className="text-lg font-bold text-slate-900">{t('programs.notSure')}</h3>
             <p className="text-sm text-slate-600 mt-1">
-              Our education advisors can help you find the perfect course based on your goals and level.
+              {t('programs.notSureDesc')}
             </p>
           </div>
           <button
@@ -92,7 +93,7 @@ export default function T4Programs() {
             }}
             className="flex-shrink-0 bg-primary hover:bg-primary-dark text-white text-sm font-semibold px-8 py-3 rounded-none transition-colors"
           >
-            Get Free Consultation
+            {t('programs.getFreeConsultation')}
           </button>
         </div>
       </div>

@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { Facebook, Instagram, Youtube, Twitter, Linkedin } from 'lucide-react';
 import { siteContent } from '../../../data/siteContent';
+import { t } from '../../../utils/i18n';
 
 const socialIcons: Record<string, React.ComponentType<{ className?: string }>> = {
   facebook: Facebook,
@@ -46,11 +47,11 @@ export default function T4Footer() {
   };
 
   const legalLinks = [
-    { label: 'Privacy Policy', href: '#' },
-    { label: 'Terms of Use', href: '#' },
-    { label: 'Cookie Policy', href: '#' },
-    { label: 'Accessibility', href: '#' },
-    { label: 'Sitemap', href: '#' },
+    { label: t('footer.privacy'), href: '#' },
+    { label: t('footer.terms'), href: '#' },
+    { label: t('footer.cookiePolicy'), href: '#' },
+    { label: t('footer.accessibility'), href: '#' },
+    { label: t('footer.sitemap'), href: '#' },
   ];
 
   return (
@@ -90,7 +91,7 @@ export default function T4Footer() {
           {/* Programs Column */}
           <div>
             <h4 className="text-xs font-bold uppercase tracking-wider text-slate-400 mb-4">
-              Programs
+              {t('footer.programs')}
             </h4>
             <ul className="space-y-2.5">
               {footerLinks.programs.map((link) => (
@@ -109,7 +110,7 @@ export default function T4Footer() {
           {/* Locations Column */}
           <div>
             <h4 className="text-xs font-bold uppercase tracking-wider text-slate-400 mb-4">
-              Locations
+              {t('footer.locations')}
             </h4>
             <ul className="space-y-2.5">
               {footerLinks.locations.map((link) => (
@@ -128,7 +129,7 @@ export default function T4Footer() {
           {/* Resources Column */}
           <div>
             <h4 className="text-xs font-bold uppercase tracking-wider text-slate-400 mb-4">
-              Resources
+              {t('footer.resources')}
             </h4>
             <ul className="space-y-2.5">
               {footerLinks.resources.map((link) => (
@@ -147,7 +148,7 @@ export default function T4Footer() {
           {/* Contact Column */}
           <div>
             <h4 className="text-xs font-bold uppercase tracking-wider text-slate-400 mb-4">
-              Contact
+              {t('footer.contact')}
             </h4>
             <ul className="space-y-2.5">
               {footerLinks.contact.map((link) => (

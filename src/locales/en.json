@@ -6,14 +6,32 @@
     "about": "About",
     "programs": "Programs",
     "contact": "Contact",
-    "applyNow": "Apply Now"
+    "applyNow": "Apply Now",
+    "testimonials": "Testimonials",
+    "schools": "Schools",
+    "media": "Media",
+    "destinations": "Destinations",
+    "programmes": "Programmes",
+    "stories": "Stories",
+    "enquire": "Enquire",
+    "letsTalk": "Let's Talk"
   },
   "hero": {
     "title": "Learn English Around the World",
     "subtitle": "with Kaplan International Languages",
     "description": "Explore our language schools across 8 countries. Watch student experiences, discover destinations, and start your international education journey today.",
     "ctaPrimary": "Apply Now",
-    "ctaSecondary": "Explore Schools"
+    "ctaSecondary": "Explore Schools",
+    "ctaBeginJourney": "Begin Your Journey",
+    "ctaExploreNow": "Explore Now",
+    "ctaRequestInfo": "Request Information",
+    "ctaDownloadBrochure": "Download Brochure",
+    "learn": "LEARN",
+    "english": "ENGLISH",
+    "scroll": "Scroll",
+    "trustedBy": "Trusted by 1M+ Students Worldwide",
+    "accreditedBy": "Accredited by",
+    "countriesSchools": "8 Countries / 35+ Schools"
   },
   "locations": {
     "title": "Our Schools Worldwide",
@@ -22,22 +40,62 @@
     "learnMore": "Learn More",
     "applyNow": "Apply Now",
     "features": "Features",
-    "close": "Close"
+    "close": "Close",
+    "searchPlaceholder": "Search locations...",
+    "viewAllDestinations": "View All Destinations",
+    "globalNetwork": "Global Network",
+    "schoolDirectory": "School Directory",
+    "directorySubtitle": "Browse our worldwide network of accredited language schools.",
+    "location": "Location",
+    "country": "Country",
+    "region": "Region",
+    "action": "Action",
+    "viewDetails": "View Details",
+    "school": "school",
+    "schools": "schools",
+    "noResults": "No locations found matching your search.",
+    "showing": "Showing",
+    "locationsAcross": "locations across",
+    "regions": "regions",
+    "ourDestinations": "Our Destinations",
+    "whereWillYourStory": "Where Will Your Story Unfold?",
+    "whereTo": "WHERE TO?",
+    "destinations": "Destinations"
   },
   "videos": {
     "title": "Watch & Explore",
     "subtitle": "See what student life is like at Kaplan schools around the world",
     "watchNow": "Watch Now",
-    "allVideos": "All Videos"
+    "allVideos": "All Videos",
+    "mediaLibrary": "Media Library",
+    "videosResources": "Videos & Resources",
+    "videosSubtitle": "Explore student experiences, campus tours, and program overviews.",
+    "watch": "Watch",
+    "media": "MEDIA",
+    "films": "Films",
+    "visualStories": "Visual Stories",
+    "experienceJourney": "Experience The Journey"
   },
   "about": {
     "title": "Why Study with Kaplan?",
     "subtitle": "World-Class Language Education Since 1938",
-    "description": "For over 80 years, Kaplan has been helping students achieve their goals through language education."
+    "description": "For over 80 years, Kaplan has been helping students achieve their goals through language education.",
+    "whyKaplan": "Why Kaplan",
+    "whyChooseUs": "Why Choose Us",
+    "whyKaplanQuestion": "WHY KAPLAN?",
+    "qualityAssurance": "Quality Assurance",
+    "studentSatisfaction": "Student Satisfaction Rate"
   },
   "programs": {
     "title": "Our Programs",
-    "subtitle": "Find the Perfect Course for You"
+    "subtitle": "Find the Perfect Course for You",
+    "courseCatalog": "Course Catalog",
+    "viewAll": "View All Programs",
+    "learnMore": "Learn More",
+    "whatWeOffer": "What We Offer",
+    "notSure": "Not sure which program is right for you?",
+    "notSureDesc": "Our education advisors can help you find the perfect course based on your goals and level.",
+    "getFreeConsultation": "Get Free Consultation"
   },
   "form": {
     "title": "Get Free Information",
@@ -59,16 +117,34 @@
     "students": "Students Worldwide",
     "countries": "Student Nationalities",
     "schools": "Schools Worldwide",
-    "years": "Years of Experience"
+    "years": "Years of Experience",
+    "schoolsGlobally": "Schools Globally",
+    "yearsExcellence": "Years of Excellence",
+    "nationalities": "Nationalities",
+    "theNumbers": "The Numbers"
   },
   "testimonials": {
     "title": "Student Stories",
-    "subtitle": "Hear from our students around the world"
+    "subtitle": "Hear from our students around the world",
+    "studentTestimonials": "Student Testimonials",
+    "whatStudentsSay": "What Our Students Say",
+    "stories": "Stories",
+    "voicesOfExperience": "Voices of Experience"
   },
   "cta": {
     "title": "Ready to Start Your Journey?",
     "description": "Take the first step towards your international education.",
-    "button": "Get Free Consultation"
+    "button": "Get Free Consultation",
+    "getStarted": "Get Started",
+    "enquireNow": "Enquire Now",
+    "freeConsultation": "Free consultation, no commitment",
+    "getInTouch": "Get in Touch",
+    "contactUsDirectly": "Contact Us Directly",
+    "whyChooseKaplan": "Why Choose Kaplan International?",
+    "requestInfoSubtitle": "Complete the form below and our education advisors will contact you within 24 hours.",
+    "beginYourJourney": "Begin Your Journey",
+    "letsTalk": "LET'S TALK",
+    "since1938": "Since 1938"
   },
   "footer": {
     "quickLinks": "Quick Links",
@@ -77,6 +153,16 @@
     "followUs": "Follow Us",
     "description": "Kaplan International TV showcases Kaplan language schools worldwide.",
     "privacy": "Privacy Policy",
-    "terms": "Terms of Service"
+    "terms": "Terms of Service",
+    "programs": "Programs",
+    "resources": "Resources",
+    "explore": "Explore",
+    "destinations": "Destinations",
+    "cookiePolicy": "Cookie Policy",
+    "accessibility": "Accessibility",
+    "sitemap": "Sitemap"
+  },
+  "language": {
+    "switchLabel": "Language"
   }
 }

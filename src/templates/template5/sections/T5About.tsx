@@ -1,5 +1,6 @@
 import { Globe, BookOpen, Users, Award, Home, TrendingUp } from 'lucide-react';
 import { siteContent } from '../../../data/siteContent';
+import { t } from '../../../utils/i18n';
 
 const iconMap: Record<string, React.ElementType> = {
   globe: Globe,
@@ -19,17 +20,17 @@ export default function T5About() {
         {/* Section label */}
         <div className="mb-6">
           <span className="text-[10px] uppercase tracking-[0.4em] text-black/30 font-light">
-            Why Choose Us
+            {t('about.whyChooseUs')}
           </span>
         </div>
 
         {/* Massive heading spanning full width */}
         <div className="mb-20 lg:mb-28">
           <h2 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-[9rem] font-black text-[#0a0a0a] tracking-tighter leading-[0.9]">
-            WHY
+            {t('about.whyKaplanQuestion').split('\n')[0] || t('about.whyKaplanQuestion')}
             <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-secondary to-accent">
-              KAPLAN?
+              {t('about.whyKaplanQuestion').split('\n')[1] || ''}
             </span>
           </h2>
           <p className="mt-8 max-w-2xl text-base sm:text-lg text-gray-500 font-light leading-relaxed">
