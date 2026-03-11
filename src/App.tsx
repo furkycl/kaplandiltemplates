@@ -5,6 +5,9 @@ import Template3 from './templates/template3/Template3'
 import Template4 from './templates/template4/Template4'
 import Template5 from './templates/template5/Template5'
 import Template6 from './templates/template6/Template6'
+import Template7 from './templates/template7/Template7'
+import Template8 from './templates/template8/Template8'
+import Template9 from './templates/template9/Template9'
 
 const templates = [
   {
@@ -67,6 +70,36 @@ const templates = [
     border: 'hover:border-amber-500',
     shadow: 'hover:shadow-amber-500/20',
   },
+  {
+    path: '/template7',
+    title: 'Template 7',
+    subtitle: 'Dark Editorial',
+    description: 'Kaplan Red accent, serif headings, grain texture, cinematic dark editorial',
+    emoji: '🔴',
+    gradient: 'from-red-700 to-rose-900',
+    border: 'hover:border-red-500',
+    shadow: 'hover:shadow-red-500/20',
+  },
+  {
+    path: '/template8',
+    title: 'Template 8',
+    subtitle: 'Glassmorphism SaaS',
+    description: 'Glass cards, gradient mesh backgrounds, modern purple-blue aesthetic',
+    emoji: '💎',
+    gradient: 'from-violet-600 to-blue-600',
+    border: 'hover:border-violet-500',
+    shadow: 'hover:shadow-violet-500/20',
+  },
+  {
+    path: '/template9',
+    title: 'Template 9',
+    subtitle: 'Split-Screen Storytelling',
+    description: 'Warm tones, asymmetric layouts, Apple-inspired clean storytelling',
+    emoji: '📖',
+    gradient: 'from-orange-600 to-amber-700',
+    border: 'hover:border-orange-500',
+    shadow: 'hover:shadow-orange-500/20',
+  },
 ]
 
 function TemplatePicker() {
@@ -112,6 +145,9 @@ export default function App() {
       <Route path="/template4" element={<Template4 />} />
       <Route path="/template5" element={<Template5 />} />
       <Route path="/template6" element={<Template6 />} />
+      <Route path="/template7" element={<Template7 />} />
+      <Route path="/template8" element={<Template8 />} />
+      <Route path="/template9" element={<Template9 />} />
     </Routes>
   )
 }
