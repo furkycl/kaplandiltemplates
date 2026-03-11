@@ -40,13 +40,13 @@ export default function T7Navbar() {
       }`}
     >
       <nav className="max-w-7xl mx-auto px-5 lg:px-10">
-        <div className="flex items-center justify-between h-16 lg:h-[72px]">
+        <div className="flex items-center justify-between h-20 lg:h-24">
           {/* Logo - Actual Kaplan Logo */}
           <Link to="/" className="flex items-center flex-shrink-0 group">
             <img
               src="/kaplanlogo.png"
               alt="Kaplan International Languages"
-              className="h-14 sm:h-16 w-auto brightness-0 invert transition-opacity duration-300 group-hover:opacity-80"
+              className="h-28 sm:h-32 lg:h-36 w-auto brightness-0 invert transition-opacity duration-300 group-hover:opacity-80"
             />
           </Link>
 

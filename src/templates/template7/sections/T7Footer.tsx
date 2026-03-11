@@ -30,11 +30,11 @@ export default function T7Footer() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* Brand */}
           <div>
-            <div className="mb-4">
+            <div className="mb-6">
               <img
                 src="/kaplanlogo.png"
                 alt="Kaplan International Languages"
-                className="h-14 w-auto brightness-0 invert opacity-80"
+                className="h-24 sm:h-28 w-auto brightness-0 invert opacity-80"
               />
             </div>
             <p className="text-sm text-white/35 leading-relaxed font-light max-w-[260px]">
