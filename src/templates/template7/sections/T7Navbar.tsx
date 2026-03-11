@@ -41,19 +41,13 @@ export default function T7Navbar() {
     >
       <nav className="max-w-7xl mx-auto px-5 lg:px-10">
         <div className="flex items-center justify-between h-16 lg:h-[72px]">
-          {/* Logo */}
-          <Link to="/" className="flex items-center gap-3 flex-shrink-0 group">
-            <div className="w-9 h-9 bg-[#C8102E] rounded-lg flex items-center justify-center transition-transform duration-300 group-hover:scale-105">
-              <span className="text-white font-bold text-lg leading-none">K</span>
-            </div>
-            <div className="hidden sm:block">
-              <span className="block text-white text-sm font-semibold tracking-wide leading-tight">
-                Kaplan International
-              </span>
-              <span className="block text-[10px] text-white/40 tracking-wider uppercase leading-tight">
-                Language Schools Worldwide
-              </span>
-            </div>
+          {/* Logo - Actual Kaplan Logo */}
+          <Link to="/" className="flex items-center flex-shrink-0 group">
+            <img
+              src="/kaplanlogo.png"
+              alt="Kaplan International Languages"
+              className="h-10 sm:h-12 w-auto brightness-0 invert transition-opacity duration-300 group-hover:opacity-80"
+            />
           </Link>
 
           {/* Desktop Nav Links */}
@@ -111,7 +105,7 @@ export default function T7Navbar() {
               onClick={() => handleNavClick('#contact')}
               className="hidden lg:inline-flex items-center px-5 py-2 bg-[#C8102E] hover:bg-[#a50d25] text-white text-[12px] font-semibold tracking-wide rounded-full transition-all duration-300 hover:shadow-lg hover:shadow-red-900/30"
             >
-              {t('cta.freeConsultation')}
+              {t('hero.freeConsultation')}
             </button>
 
             {/* Mobile Toggle */}
@@ -176,7 +170,7 @@ export default function T7Navbar() {
                 onClick={() => handleNavClick('#contact')}
                 className="w-full py-3 bg-[#C8102E] hover:bg-[#a50d25] text-white text-[13px] font-semibold tracking-wide rounded-full transition-all duration-300"
               >
-                {t('cta.freeConsultation')}
+                {t('hero.freeConsultation')}
               </button>
             </div>
           </div>

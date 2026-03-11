@@ -80,7 +80,7 @@ export default function T7Hero() {
             <span className="relative inline-flex rounded-full h-2 w-2 bg-[#C8102E]" />
           </span>
           <span className="text-[11px] uppercase tracking-[0.2em] text-white/60 font-medium">
-            Official Kaplan International Partner
+            {t('hero.officialPartner')}
           </span>
         </div>
 

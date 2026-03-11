@@ -119,7 +119,7 @@ export default function T7About() {
                     {stats.years}
                   </h3>
                   <p className="mt-2 text-white/40 font-light text-base leading-relaxed">
-                    Years shaping global language learners across 8 countries and 35+ world-class schools.
+                    {t('about.yearsShaping')}
                   </p>
                 </div>
               </div>

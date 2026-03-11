@@ -30,14 +30,12 @@ export default function T7Footer() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* Brand */}
           <div>
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-9 h-9 bg-[#C8102E] rounded-lg flex items-center justify-center font-serif text-lg text-white">
-                K
-              </div>
-              <div>
-                <div className="text-[15px] font-medium text-white leading-tight">Kaplan International</div>
-                <div className="text-[11px] font-light text-[#8A8A8A]">Language Schools Worldwide</div>
-              </div>
+            <div className="mb-4">
+              <img
+                src="/kaplanlogo.png"
+                alt="Kaplan International Languages"
+                className="h-10 w-auto brightness-0 invert opacity-80"
+              />
             </div>
             <p className="text-sm text-white/35 leading-relaxed font-light max-w-[260px]">
               {t('footer.description')}
