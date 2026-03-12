@@ -30,13 +30,13 @@ export default function T10Footer() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 mb-14">
           {/* Brand */}
           <div>
-            <div className="flex items-center gap-2.5 mb-4">
+            <div className="flex items-center gap-2.5 mb-5">
               <img
                 src="/kaplanlogo.png"
                 alt="Kaplan International Languages"
-                className="h-14 w-auto brightness-0 invert"
+                className="h-20 sm:h-24 w-auto brightness-0 invert"
               />
-              <span className="bg-[#E31837] text-white text-[11px] font-bold px-2 py-0.5 rounded">
+              <span className="bg-[#E31837] text-white text-[12px] font-bold px-2.5 py-1 rounded">
                 TV
               </span>
             </div>

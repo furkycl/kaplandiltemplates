@@ -55,15 +55,16 @@ export default function T10Navbar() {
         }`}
       >
         <nav className="max-w-7xl mx-auto px-6 lg:px-10">
-          <div className="flex items-center justify-between h-[72px]">
+          <div className="flex items-center justify-between h-20 lg:h-24">
             {/* Logo */}
             <Link to="/" className="flex items-center gap-2.5 flex-shrink-0">
               <img
                 src="/kaplanlogo.png"
                 alt="Kaplan International Languages"
-                className="h-14 sm:h-16 w-auto"
+                className="h-20 sm:h-24 lg:h-28 w-auto"
+                style={{ filter: 'brightness(0) saturate(100%) invert(8%) sepia(40%) saturate(5000%) hue-rotate(215deg) brightness(90%) contrast(105%)' }}
               />
-              <span className="bg-[#E31837] text-white text-[11px] font-bold px-2 py-0.5 rounded">
+              <span className="bg-[#E31837] text-white text-[12px] font-bold px-2.5 py-1 rounded">
                 TV
               </span>
             </Link>
