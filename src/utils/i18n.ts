@@ -5,10 +5,11 @@ type Locale = 'en' | 'tr';
 
 const translations: Record<Locale, Record<string, unknown>> = { en, tr };
 
-let currentLocale: Locale = 'en';
+let currentLocale: Locale = (localStorage.getItem('locale') as Locale) || 'en';
 
 export function setLocale(locale: Locale): void {
   currentLocale = locale;
+  localStorage.setItem('locale', locale);
 }
 
 export function getLocale(): Locale {
