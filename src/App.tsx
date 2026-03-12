@@ -8,6 +8,7 @@ import Template6 from './templates/template6/Template6'
 import Template7 from './templates/template7/Template7'
 import Template8 from './templates/template8/Template8'
 import Template9 from './templates/template9/Template9'
+import Template10 from './templates/template10/Template10'
 
 const templates = [
   {
@@ -100,6 +101,16 @@ const templates = [
     border: 'hover:border-orange-500',
     shadow: 'hover:shadow-orange-500/20',
   },
+  {
+    path: '/template10',
+    title: 'Template 10',
+    subtitle: 'Corporate Institutional',
+    description: 'Navy & red, corporate layout, trust-focused, clean institutional design',
+    emoji: '🏛️',
+    gradient: 'from-blue-900 to-red-700',
+    border: 'hover:border-blue-400',
+    shadow: 'hover:shadow-blue-400/20',
+  },
 ]
 
 function TemplatePicker() {
@@ -148,6 +159,7 @@ export default function App() {
       <Route path="/template7" element={<Template7 />} />
       <Route path="/template8" element={<Template8 />} />
       <Route path="/template9" element={<Template9 />} />
+      <Route path="/template10" element={<Template10 />} />
     </Routes>
   )
 }
