@@ -31,7 +31,9 @@
     "scroll": "Kaydır",
     "trustedBy": "Dünya Genelinde 1M+ Öğrenci Tarafından Tercih Ediliyor",
     "accreditedBy": "Akredite Eden Kuruluşlar",
-    "countriesSchools": "8 Ülke / 35+ Okul"
+    "countriesSchools": "8 Ülke / 35+ Okul",
+    "officialPartner": "Resmi Kaplan International Partneri",
+    "freeConsultation": "Ücretsiz Danışmanlık"
   },
   "locations": {
     "title": "Dünya Genelindeki Okullarımız",
@@ -84,7 +86,8 @@
     "whyChooseUs": "Neden Bizi Seçmelisiniz",
     "whyKaplanQuestion": "NEDEN KAPLAN?",
     "qualityAssurance": "Kalite Güvencesi",
-    "studentSatisfaction": "Öğrenci Memnuniyet Oranı"
+    "studentSatisfaction": "Öğrenci Memnuniyet Oranı",
+    "yearsShaping": "8 ülke ve 35+ dünya standartlarında okulla küresel dil öğrenicilerini şekillendiren yıllar."
   },
   "programs": {
     "title": "Programlarımız",

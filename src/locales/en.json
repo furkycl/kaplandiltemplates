@@ -31,7 +31,9 @@
     "scroll": "Scroll",
     "trustedBy": "Trusted by 1M+ Students Worldwide",
     "accreditedBy": "Accredited by",
-    "countriesSchools": "8 Countries / 35+ Schools"
+    "countriesSchools": "8 Countries / 35+ Schools",
+    "officialPartner": "Official Kaplan International Partner",
+    "freeConsultation": "Free Consultation"
   },
   "locations": {
     "title": "Our Schools Worldwide",
@@ -84,7 +86,8 @@
     "whyChooseUs": "Why Choose Us",
     "whyKaplanQuestion": "WHY KAPLAN?",
     "qualityAssurance": "Quality Assurance",
-    "studentSatisfaction": "Student Satisfaction Rate"
+    "studentSatisfaction": "Student Satisfaction Rate",
+    "yearsShaping": "Years shaping global language learners across 8 countries and 35+ world-class schools."
   },
   "programs": {
     "title": "Our Programs",

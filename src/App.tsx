@@ -6,9 +6,13 @@ import Template4 from './templates/template4/Template4'
 import Template5 from './templates/template5/Template5'
 import Template6 from './templates/template6/Template6'
 import Template7 from './templates/template7/Template7'
+import T7Destinations from './templates/template7/T7Destinations'
+import T7CityPage from './templates/template7/T7CityPage'
 import Template8 from './templates/template8/Template8'
 import Template9 from './templates/template9/Template9'
 import Template10 from './templates/template10/Template10'
+import T10Destinations from './templates/template10/T10Destinations'
+import T10CityPage from './templates/template10/T10CityPage'
 
 const templates = [
   {
@@ -157,9 +161,13 @@ export default function App() {
       <Route path="/template5" element={<Template5 />} />
       <Route path="/template6" element={<Template6 />} />
       <Route path="/template7" element={<Template7 />} />
+      <Route path="/template7/destinations" element={<T7Destinations />} />
+      <Route path="/template7/destinations/:citySlug" element={<T7CityPage />} />
       <Route path="/template8" element={<Template8 />} />
       <Route path="/template9" element={<Template9 />} />
       <Route path="/template10" element={<Template10 />} />
+      <Route path="/template10/destinations" element={<T10Destinations />} />
+      <Route path="/template10/destinations/:citySlug" element={<T10CityPage />} />
     </Routes>
   )
 }
