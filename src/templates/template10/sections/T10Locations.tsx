@@ -1,21 +1,18 @@
 import { useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
 import { MapPin, ArrowRight, Play } from 'lucide-react';
-import { locationGroups, type Location } from '../../../data/locations';
+import { locationGroups } from '../../../data/locations';
 import { t } from '../../../utils/i18n';
-
-interface Props {
-  onSelectLocation: (location: Location) => void;
-}
 
 const featuredCities = ['London', 'New York', 'Toronto', 'Dublin', 'Sydney', 'Paris-Passy'];
 
-export default function T10Locations({ onSelectLocation }: Props) {
+export default function T10Locations() {
   const sectionRef = useRef<HTMLElement>(null);
   const allLocations = locationGroups.flatMap((g) => g.locations);
 
   const featured = featuredCities
     .map((name) => allLocations.find((l) => l.name === name))
-    .filter(Boolean) as Location[];
+    .filter(Boolean) as typeof allLocations;
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -34,10 +31,7 @@ export default function T10Locations({ onSelectLocation }: Props) {
     return () => observer.disconnect();
   }, []);
 
-  const handleScroll = (id: string) => {
-    const el = document.getElementById(id);
-    if (el) el.scrollIntoView({ behavior: 'smooth' });
-  };
+  const toSlug = (name: string) => name.toLowerCase().replace(/[^a-z0-9]+/g, '-');
 
   return (
     <section ref={sectionRef} id="locations" className="bg-white py-20 sm:py-28">
@@ -55,10 +49,11 @@ export default function T10Locations({ onSelectLocation }: Props) {
         {/* Destination Grid - 3x2 */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {featured.map((loc, i) => (
-            <div
+            <Link
               key={loc.id}
+              to={`/template10/destinations/${toSlug(loc.name)}`}
               data-animate
-              className="opacity-0 translate-y-6 transition-all duration-600 group bg-white rounded-2xl border border-gray-100 overflow-hidden hover:shadow-xl hover:shadow-gray-200/60 hover:-translate-y-1 transition-all duration-300"
+              className="opacity-0 translate-y-6 transition-all duration-600 group bg-white rounded-2xl border border-gray-100 overflow-hidden hover:shadow-xl hover:shadow-gray-200/60 hover:-translate-y-1 block"
               style={{ transitionDelay: `${150 + i * 80}ms` }}
             >
               {/* Image */}
@@ -94,27 +89,24 @@ export default function T10Locations({ onSelectLocation }: Props) {
                 <p className="mt-2 text-gray-500 text-[14px] leading-relaxed line-clamp-2">
                   {loc.description}
                 </p>
-                <button
-                  onClick={() => onSelectLocation(loc)}
-                  className="mt-4 inline-flex items-center gap-1.5 text-[#E31837] text-[14px] font-semibold hover:gap-2.5 transition-all duration-200"
-                >
-                  {t('videos.watchNow')}
+                <span className="mt-4 inline-flex items-center gap-1.5 text-[#E31837] text-[14px] font-semibold group-hover:gap-2.5 transition-all duration-200">
+                  {t('locations.learnMore')}
                   <ArrowRight className="w-4 h-4" />
-                </button>
+                </span>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
 
         {/* View All Button */}
         <div data-animate className="opacity-0 translate-y-6 transition-all duration-600 delay-500 text-center mt-12">
-          <button
-            onClick={() => handleScroll('contact')}
+          <Link
+            to="/template10/destinations"
             className="inline-flex items-center gap-2 px-8 py-3.5 border-2 border-[#0F1A3C] text-[#0F1A3C] text-[14px] font-semibold rounded-lg hover:bg-[#0F1A3C] hover:text-white transition-all duration-300"
           >
             {t('locations.viewAllDestinations')}
             <ArrowRight className="w-4 h-4" />
-          </button>
+          </Link>
         </div>
       </div>
     </section>

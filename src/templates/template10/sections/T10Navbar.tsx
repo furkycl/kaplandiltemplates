@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { Menu, X, Globe, Phone, Mail } from 'lucide-react';
 import { t, getSupportedLocales, setLocale, getLocale } from '../../../utils/i18n';
 
@@ -8,6 +8,7 @@ export default function T10Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [langOpen, setLangOpen] = useState(false);
   const locales = getSupportedLocales();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -16,14 +17,18 @@ export default function T10Navbar() {
   }, []);
 
   const navLinks = [
-    { label: t('nav.home'), href: '#hero' },
-    { label: t('nav.destinations'), href: '#locations' },
+    { label: t('nav.home'), href: '/template10' },
+    { label: t('nav.destinations'), href: '/template10/destinations' },
     { label: t('about.whyKaplan'), href: '#about' },
     { label: t('nav.contact'), href: '#contact' },
   ];
 
   const handleNavClick = (href: string) => {
     setMobileOpen(false);
+    if (href.startsWith('/')) {
+      navigate(href);
+      return;
+    }
     const id = href.replace('#', '');
     const el = document.getElementById(id);
     if (el) el.scrollIntoView({ behavior: 'smooth' });

@@ -1,13 +1,10 @@
 import { useState, useEffect, useRef } from 'react';
-import { Play, ArrowUpRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { Play, ArrowUpRight, ArrowRight } from 'lucide-react';
 import { locationGroups, type Location } from '../../../data/locations';
 import { t } from '../../../utils/i18n';
 
-interface T7LocationsProps {
-  onSelectLocation: (location: Location) => void;
-}
-
-export default function T7Locations({ onSelectLocation }: T7LocationsProps) {
+export default function T7Locations() {
   const [activeFilter, setActiveFilter] = useState('all');
   const sectionRef = useRef<HTMLElement>(null);
 
@@ -53,6 +50,8 @@ export default function T7Locations({ onSelectLocation }: T7LocationsProps) {
 
     return () => observer.disconnect();
   }, [activeFilter]);
+
+  const toSlug = (name: string) => name.toLowerCase().replace(/[^a-z0-9]+/g, '-');
 
   return (
     <section ref={sectionRef} id="locations" className="relative bg-[#0A0A0A] py-24 sm:py-32">
@@ -103,11 +102,11 @@ export default function T7Locations({ onSelectLocation }: T7LocationsProps) {
         {/* Location cards grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredLocations.map((location, index) => (
-            <button
+            <Link
               key={location.id}
               data-animate
-              onClick={() => onSelectLocation(location)}
-              className={`opacity-0 translate-y-8 transition-all duration-700 group text-left rounded-xl border border-white/[0.06] bg-[#111111] hover:border-[#C8102E]/30 hover:shadow-xl hover:shadow-red-900/5 hover:-translate-y-1`}
+              to={`/template7/destinations/${toSlug(location.name)}`}
+              className={`opacity-0 translate-y-8 transition-all duration-700 group text-left rounded-xl border border-white/[0.06] bg-[#111111] hover:border-[#C8102E]/30 hover:shadow-xl hover:shadow-red-900/5 hover:-translate-y-1 block`}
               style={{ transitionDelay: `${150 + index * 80}ms` }}
             >
               {/* Video placeholder / image */}
@@ -149,8 +148,19 @@ export default function T7Locations({ onSelectLocation }: T7LocationsProps) {
                 </span>
                 <ArrowUpRight className="w-4 h-4 text-white/20 group-hover:text-[#C8102E] transition-all duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
               </div>
-            </button>
+            </Link>
           ))}
+        </div>
+
+        {/* View All Destinations */}
+        <div data-animate className="opacity-0 translate-y-8 transition-all duration-700 delay-500 text-center mt-14">
+          <Link
+            to="/template7/destinations"
+            className="inline-flex items-center gap-2 px-8 py-3.5 border border-white/10 text-white/70 text-[13px] font-semibold tracking-wide rounded-full hover:border-[#C8102E]/40 hover:text-white hover:bg-[#C8102E]/10 transition-all duration-300"
+          >
+            {t('locations.viewAllDestinations')}
+            <ArrowRight className="w-4 h-4" />
+          </Link>
         </div>
       </div>
     </section>
